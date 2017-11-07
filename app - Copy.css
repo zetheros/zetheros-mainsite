@@ -1,20 +1,19 @@
-/*--Background*/
+/*--background options-------------------------------------------------------*/
 body {
 	margin: 0;
 	background-color: rgb(75,75,75);
-  font: 16px/1.5 sans-serif;
-  color: rgb(220,200,180);
-  padding: 3.5rem 0 0;
+	font: 16px/1.5 sans-serif;
+	color: rgb(220,200,180);
+	padding: 3.5rem 0 3.7rem;
 }
-/*header options*/
+
+/*header options-------------------------------------------------------*/
 .app-header {
   display: flex;
 	flex-flow: column nowrap;
 	justify-content: center;
 	align-items: center;
-
-
-    position: fixed;
+	position: fixed;
     z-index: 100;
     top: 0;
     left: 0;
@@ -23,27 +22,33 @@ body {
     background: rgba(50,50,50,0.9);
 
 }
+
 .app-header .title {
-  color: rgb(220,200,180);
+  color: rgb(270,250,230);
   font-size: .8rem;
   text-transform: uppercase;
   letter-spacing: .2rem;
+
 }
+
 .app-header .subtitle {
   color: rgb(220,200,180);
   font-size: .6rem;
   text-transform: uppercase;
   letter-spacing: .4rem;
+
 }
 
-/*image options*/
+/*image options-------------------------------------------------------*/
 .images {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
 /*centers and limits image rows*/
   margin: 0 auto;
+
 }
+
 .images .image {
   border: 1px solid rgb(0, 0, 0);
   max-width: 256px;
@@ -67,9 +72,19 @@ body {
 .images .image img {
     flex: 1;
 }
+/*large viewports-------------------------------------------------------*/
+@media screen and (min-width: 1024px) {
+    .images {
+        max-width: 90%;
+    }
+}
 
 
-/*aside options*/
+/*footer options-------------------------------------------------------*/
+
+.tab {
+	margin-left: 40px;
+}
 
 aside {
     /*border: 1px solid rgb(255, 0, 0);*/
@@ -82,10 +97,8 @@ aside {
 	  width: 100vw;
 }
 aside section {
-    /*border-bottom: 1px solid rgb(255, 0, 0);*/
-    background: rgb(50,50,50);
-    padding: 1rem;
-    margin-bottom: 1px;
+    background: rgba(50,50,50,.9);
+    padding: 1.5rem;
 }
 aside section:last-of-type{
     border-bottom: none
@@ -94,23 +107,20 @@ aside section:last-of-type{
 aside summary {
     text-transform: uppercase;
     font-weight: b;
-	font-size: .8rem;
+	font-size: .7rem;
 	letter-spacing: .05rem;
-	color: rgb(250,230,210);
+	color: rgb(270,250,230);
 
 }
 aside section a {
-    color: rgb(250,230,210);
+    color: rgb(225,120,0);
+	letter-spacing: .025rem;
+	font-size: 1.1rem;
 }
 
-aside section details main p2 {
-	font-size: ;
-}
-/*large viewports*/
-@media screen and (min-width: 1024px) {
-    .images {
-        max-width: 90%;
-    }
+aside section details main p1 {
+	font-size: 1rem;
+	color: rgb(250,230,210);
 }
 
 .copyright {
