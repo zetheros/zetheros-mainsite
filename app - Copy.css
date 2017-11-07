@@ -1,0 +1,125 @@
+/*--Background*/
+body {
+	margin: 0;
+	background-color: rgb(75,75,75);
+  font: 16px/1.5 sans-serif;
+  color: rgb(220,200,180);
+  padding: 3.5rem 0 0;
+}
+/*header options*/
+.app-header {
+  display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+
+
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 3rem;
+    background: rgba(50,50,50,0.9);
+
+}
+.app-header .title {
+  color: rgb(220,200,180);
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+}
+.app-header .subtitle {
+  color: rgb(220,200,180);
+  font-size: .6rem;
+  text-transform: uppercase;
+  letter-spacing: .4rem;
+}
+
+/*image options*/
+.images {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+/*centers and limits image rows*/
+  margin: 0 auto;
+}
+.images .image {
+  border: 1px solid rgb(0, 0, 0);
+  max-width: 256px;
+  max-height: 512px;
+  flex: 0 0 30vw;
+  position: relative;
+  height: 60vw;
+  display: flex;
+}
+.images .image:before {
+  content: "";
+  background: url("./vignette.png");
+  background-size: cover;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.images .image img {
+    flex: 1;
+}
+
+
+/*aside options*/
+
+aside {
+    /*border: 1px solid rgb(255, 0, 0);*/
+	display: flex;
+	  flex-flow: column nowrap;
+	  position: fixed;
+	  z-index: 100;
+	  bottom: 0;
+	  left: 0;
+	  width: 100vw;
+}
+aside section {
+    /*border-bottom: 1px solid rgb(255, 0, 0);*/
+    background: rgb(50,50,50);
+    padding: 1rem;
+    margin-bottom: 1px;
+}
+aside section:last-of-type{
+    border-bottom: none
+}
+
+aside summary {
+    text-transform: uppercase;
+    font-weight: b;
+	font-size: .8rem;
+	letter-spacing: .05rem;
+	color: rgb(250,230,210);
+
+}
+aside section a {
+    color: rgb(250,230,210);
+}
+
+aside section details main p2 {
+	font-size: ;
+}
+/*large viewports*/
+@media screen and (min-width: 1024px) {
+    .images {
+        max-width: 90%;
+    }
+}
+
+.copyright {
+	display: flex;
+	  position: fixed;
+	  z-index: 101;
+	  bottom: 3%;
+	  left: 68%;
+	  font-size: .6rem;
+	  color: rgb(110,110,110);
+
+}
